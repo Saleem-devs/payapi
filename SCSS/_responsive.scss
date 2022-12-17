@@ -1,0 +1,199 @@
+@include media-tablet {
+
+    h1 {
+        font-size: 40px
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        
+
+        &-left, &-right {
+            @include fullWidth;
+        }
+
+        &-left form {
+            @include flexColumn;
+            align-items: center;
+        }
+
+        &-left p {
+            margin-bottom: 30px;
+        }
+    }
+
+    .work {
+        @include flexColumn;
+        
+
+        &-left, &-right {
+            @include fullWidth;
+        }
+
+        &-left {
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    .section-content {
+        @include flexColumn;
+
+        &-right, &-left {
+            @include fullWidth; 
+        }
+    }
+
+    .uiux {
+        @include flexColumn;
+        flex-direction: column-reverse;
+
+        &-right, &-left {
+            @include fullWidth; 
+        }
+    }
+
+    .tasks {
+        @include flexColumn;
+
+        .task {
+            @include fullWidth; 
+        }
+    }
+
+    .cta {
+        @include flexColumn;
+        &-right {
+
+            form {
+                @include flexColumn;
+                align-items: center;
+            }
+            
+        }
+    }
+}
+
+@include media-mobile {
+    header .pages-link, header .navbar-right {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block !important;
+    }
+    .work .row {
+        @include flexColumn;
+        column-gap: 30px;
+    }
+    .hero-left form input {
+        width: 100%;
+    }
+    .cta  {
+        &-left {
+            h1{
+                text-align: center;
+            }
+        }
+        &-right {
+            width: 100%;
+
+            form {
+                input {
+                width: 100% !important;
+                }
+            }
+        }
+    }
+
+    footer .navbar {
+        @include flexColumn;
+        align-items: center;
+
+        &-left {
+            justify-content: center;
+
+            .pages-link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+
+    .pricing {
+        h1 {
+            text-align: center;
+        }
+        .plan {
+            @include flexColumn;
+            row-gap: 40px;
+            &-content {
+                @include fullWidth;
+    
+                button{
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        
+    }
+    
+    .about h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+    }
+    .about-content {
+            width: 100%;
+            @include flexColumn;
+            align-items: center;
+            text-align: center;
+    }
+    .stats {
+        .container {
+            width: 100%;
+        }
+        .row{
+            @include flexColumn;
+            row-gap: 40px;
+
+            .col3 {
+                @include fullWidth;
+            }
+        }
+    }
+
+    .contact-container {
+
+        .head {
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+        }
+    
+        .contact {
+            @include flexColumn;
+
+            &-right, &-left {
+                @include fullWidth;
+            }
+            &-left {
+                text-align: left;
+            }
+            &-right {
+                .row {
+                    @include flexColumn;
+                    column-gap: 30px;
+                    margin-top: 40px;
+                }
+            }
+        }
+        
+    } 
+    
+}
+

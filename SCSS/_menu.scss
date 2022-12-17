@@ -1,0 +1,41 @@
+.menu {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    width: 80%;
+    margin: auto;
+    padding: 40px 30px;
+    text-align: center;
+    @include shadow;
+    animation: slideInTop .5s ease-in;
+
+    a{
+        display: block;
+        margin-bottom: 30px;
+        font-size: 20px
+    }
+
+    button{
+        @include scheduleBtn;
+        transition: all 0.5s;
+        margin-top: 20px;
+        font-size: 20px;
+
+        &:hover {
+            background: $btnBgHover;
+        }
+    }
+
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateX(100px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

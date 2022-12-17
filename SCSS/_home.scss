@@ -1,0 +1,184 @@
+.hero {
+    @include flexCenter;
+
+    &-left {
+        @include flexColumn;
+        @include halfWidth;
+
+        h1 {
+            color: $secondaryColor;
+            font-size: 50px;
+            font-family: $headingFont;
+            line-height: 55px;
+            font-weight: 700;
+        }
+
+        form {
+            input{
+                @include input;
+                @include shadow;
+                width: 400px;
+                margin-bottom: 15px;
+
+                &:focus {
+                    border: 1px solid $btnBg;
+                }
+
+                &::placeholder {
+                    color: $primaryColor;
+                    font-weight: 700;
+                }
+            }
+
+            button {
+                @include scheduleBtn;
+                transition: all 0.5s;
+
+                &:hover {
+                    background: $btnBgHover;
+                }
+            }
+        }
+    }
+}
+
+/*==============who we work with============*/
+
+.work-container {
+    background: $darkBg;
+    padding: 70px 0;
+}
+.work {
+    @include flexCenter;
+
+    &-left, &-right {
+        @include halfWidth
+    }
+
+    &-left {
+        @include flexColumn;
+        h1 {
+            font-size: 45px;
+            color: #fff;
+            
+        }
+        p{
+            font-size: 14px
+        }
+        button {
+            padding: 15px 20px;
+            width: 130px;
+            background: transparent;
+            border-radius: 30px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: #fff;
+
+                a {
+                    color: $secondaryColor;
+                }
+            }
+
+            a {
+                color: #fff;
+                font-weight: 700;
+            }
+
+            
+        }
+    }
+
+    &-right {
+
+        .row {
+            @include flexCenter;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .svg {
+                @include oneThirdWidth
+            }
+        }
+    }
+}
+
+/*==========easy to implemtn ============*/
+
+.easy-to-implement {
+    background: $lightBg;
+    padding: 30px 0;
+
+    .section-content {
+        @include flexCenter;
+
+        &-left, &-right {
+            @include halfWidth
+        }
+
+        &-right {
+            @include flexColumn;
+
+            h1 {
+                font-size: 50px;
+                color: $secondaryColor;
+            }
+            p{
+                color: $darkColor;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.simple-uiux {
+    background: $lightBg;
+    padding: 30px 0;
+
+    .uiux {
+        @include flexCenter;
+
+        &-left, &-right {
+            @include halfWidth;
+        }
+        &-left {
+            @include flexColumn;
+
+            h1 {
+                font-size: 50px;
+                color: $secondaryColor;
+            }
+            p{
+                color: $darkColor;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.task-container {
+    background: $lightBg;
+    padding: 30px 0;
+
+    .tasks {
+        @include flexCenter;
+
+        .task {
+            @include flexColumn;
+            @include oneThirdWidth;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 60px;
+
+            img {
+                width: 30%;
+            }
+            .title {
+                color: $darkColor;
+                font-weight: bold;
+            }
+        }
+    }
+}

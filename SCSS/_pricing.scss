@@ -1,0 +1,71 @@
+.pricing {
+    background: $lightBg;
+    padding: 70px 0 40px 0;
+
+    h1 {
+        font-size: 50px;
+        color: $secondaryColor;
+        margin-bottom: 60px;
+    }
+
+    .plan {
+        @include flexCenter;
+        margin-bottom: 40px;
+
+        &-content {
+            @include flexColumn;
+            @include oneThirdWidth;
+
+            h2 {
+                font-size: 30px;
+                color: $btnBg;
+            }
+            p{
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 50px;
+            }
+            ul {
+                padding-top: 30px;
+                border-top: 1px solid $secondaryColor;
+                border-bottom: 1px solid $secondaryColor;
+
+                li {
+                    margin-bottom: 25px;
+                    opacity: .6;
+                    padding-left: 30px;
+                }
+                .checked {
+                    opacity: 1;
+                    position: relative;
+                    &::before {
+                        content: "\2713";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $btnBg;
+                        font-weight: 700;
+                    }
+                }
+            }
+            button {
+                padding: 15px 20px;
+                border: 1px solid $darkColor;
+                outline: none;
+                color: $secondaryColor;
+                font-weight: 700;
+                border-radius: 30px;
+                width: 150px;
+                background: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    background: $darkColor;
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}

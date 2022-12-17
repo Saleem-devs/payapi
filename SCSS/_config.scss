@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+@mixin container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin scheduleBtn {
+    border: none;
+    outline: none;
+    background: $btnBg;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@mixin input {
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+
+@mixin shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin halfWidth {
+    width: 45%;
+}
+
+@mixin oneThirdWidth {
+    width: 30%;
+}
+
+@mixin fullWidth {
+    width: 100% !important;
+    text-align: center;
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: 954px) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media screen and (max-width: 780px) {
+        @content;
+    }
+}
+
+$darkBg: #1b262f;
+$lightBg: #ecf3f9;
+$secondaryColor: #36536B;
+$primaryColor: #6C8294;
+$darkColor: #212529;
+$btnBg: #BA4270;
+$btnBgHover: #ba4270af;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap'); 
+$headingFont: 'DM Serif Display', serif;
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $headingFont;
+    font-weight: 500
+}

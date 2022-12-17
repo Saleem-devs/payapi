@@ -1,0 +1,54 @@
+.about {
+    background: $lightBg;
+    padding: 70px 0;
+
+    h1 {
+        font-size: 45px;
+        line-height: 50px;
+        width: 80%;
+        color: $darkColor;
+        margin-bottom: 50px;
+    }
+
+    &-content {
+        @include flexCenter;
+        margin-bottom: 30px;
+        align-items: flex-start;
+        p {
+            flex-basis: 70%;
+            font-size: 14px;
+        }
+        h2 {
+            color: $darkColor;
+        }
+    }
+}
+
+.img {
+    background: $lightBg;
+}
+
+.stats {
+    background: $lightBg;
+    padding: 70px;
+
+    .row {
+        @include flexCenter;
+        margin-bottom: 40px;
+
+        .col3 {
+            padding: 20px 0;
+            @include oneThirdWidth;
+            border-top: 1px solid $primaryColor;
+            border-bottom: 1px solid $primaryColor;
+
+            p {
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 50px;
+                color: $btnBg;
+            }
+        }
+    }
+}
